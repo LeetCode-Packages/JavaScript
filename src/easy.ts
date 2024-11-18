@@ -35,7 +35,10 @@ export function twoSum(nums: number[], target: number): number[] {
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
     if (map.has(complement)) {
-      return [map.get(complement), i];
+      const temp = map.get(complement)
+      if (temp !== undefined) {
+        return [temp, i];
+      }
     }
     map.set(nums[i], i);
   }
