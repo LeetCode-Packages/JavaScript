@@ -1,3 +1,6 @@
+/**
+ * Definition for a singly linked list.
+ */
 export class ListNode {
   val: number;
   next: ListNode | null;

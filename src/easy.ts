@@ -1,5 +1,8 @@
 import type { ListNode } from "./utils.ts";
+
 /**
+ * https://leetcode.com/problems/two-sum/
+ *
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  *
@@ -46,6 +49,11 @@ export function twoSum(nums: number[], target: number): number[] {
   return [];
 }
 
+/**
+ * https://leetcode.com/problems/palindrome-number/
+ * @param x
+ * @returns
+ */
 export function palindromeNumber(x: number): boolean {
   const num = x;
   if (x < 0) return false;
@@ -59,6 +67,11 @@ export function palindromeNumber(x: number): boolean {
   return num === ans;
 }
 
+/**
+ * https://leetcode.com/problems/roman-to-integer/
+ * @param s
+ * @returns
+ */
 export function romanToInteger(s: string): number {
   const multipliers: { [key: string]: number } = {
     IV: 4,
@@ -95,6 +108,11 @@ export function romanToInteger(s: string): number {
   }, 0);
 }
 
+/**
+ * https://leetcode.com/problems/longest-common-prefix/
+ * @param strs
+ * @returns
+ */
 export function longestCommonPrefix(strs: string[]): string {
   let prefix = strs[0];
 
@@ -111,6 +129,11 @@ export function longestCommonPrefix(strs: string[]): string {
   return prefix;
 }
 
+/**
+ * https://leetcode.com/problems/valid-parentheses/
+ * @param s
+ * @returns
+ */
 export function validParentheses(s: string): boolean {
   const bracketsMap: { [key: string]: string } = {
     ")": "(",
@@ -132,6 +155,12 @@ export function validParentheses(s: string): boolean {
   return !openBracketsStack.length;
 }
 
+/**
+ * https://leetcode.com/problems/merge-two-sorted-lists/
+ * @param list1
+ * @param list2
+ * @returns
+ */
 export function mergeTwoSortedLists(
   list1: ListNode | null,
   list2: ListNode | null,
@@ -148,6 +177,11 @@ export function mergeTwoSortedLists(
   }
 }
 
+/**
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ * @param nums
+ * @returns
+ */
 export function removeDuplicatesFromSortedArray(nums: number[]): number {
   let i = 0;
   for (let j = 0; j < nums.length; j++) {
@@ -159,12 +193,24 @@ export function removeDuplicatesFromSortedArray(nums: number[]): number {
   return i;
 }
 
+/**
+ * https://leetcode.com/problems/remove-element/
+ * @param nums
+ * @param val
+ * @returns
+ */
 export function removeElement(nums: number[], val: number): number {
   let j = 0;
   for (const n of nums) if (n !== val) nums[j++] = n;
   return j;
 }
 
+/**
+ * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+ * @param haystack
+ * @param needle
+ * @returns
+ */
 export function findTheIndexOfTheFirstOccurrenceInAString(
   haystack: string,
   needle: string,
@@ -188,6 +234,12 @@ export function findTheIndexOfTheFirstOccurrenceInAString(
   return result;
 }
 
+/**
+ * https://leetcode.com/problems/search-insert-position/
+ * @param nums
+ * @param target
+ * @returns
+ */
 export function searchInsertPosition(nums: number[], target: number): number {
   let min = 0;
   let max = nums.length - 1;

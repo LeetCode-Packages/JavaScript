@@ -1,6 +1,5 @@
 import {
   assert,
-  assertAlmostEquals,
   assertArrayIncludes,
   assertEquals,
   assertFalse,
@@ -79,7 +78,7 @@ Deno.test(function removeElementTest() {
 
   nums = [0, 1, 2, 2, 3, 0, 4, 2];
   assertEquals(easy.removeElement(nums, 2), 5);
-  assertArrayIncludes(nums.slice(0, 5), [0, 1, 4, 0, 3])
+  assertArrayIncludes(nums.slice(0, 5), [0, 1, 4, 0, 3]);
 });
 
 Deno.test(function findTheIndexOfTheFirstOccurrenceInAStringTest() {
