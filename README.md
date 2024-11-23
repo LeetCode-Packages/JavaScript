@@ -1,3 +1,3 @@
-# JavaScript
+# TypeScript
 
-Implementations of LeetCode problem solutions in JavaScript.
+Implementations of LeetCode problem solutions in TypeScript.
